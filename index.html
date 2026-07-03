@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html
+  lang="ar"
+  dir="rtl"
+  data-lang="ar"
+  data-title-ar="معيار المعلم — كل ما يحتاجه المعلم لقياس مستوى طلابه"
+  data-title-en="Meyar Almoallem — Everything a teacher needs to measure student progress"
+  data-desc-ar="معيار المعلم تطبيق مجاني للمعلمين لإدارة الشعب والطلاب والحضور والاختبارات وتصحيح أوراق OMR وطباعة التقارير والشهادات — بالكامل دون إنترنت."
+  data-desc-en="Meyar Almoallem is an offline-first app for teachers to manage classes, students, attendance, exams, OMR grading, and PDF reports — with complete privacy, no internet required."
+>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>معيار المعلم — كل ما يحتاجه المعلم لقياس مستوى طلابه</title>
+  <meta
+    name="description"
+    content="معيار المعلم تطبيق مجاني للمعلمين لإدارة الشعب والطلاب والحضور والاختبارات وتصحيح أوراق OMR وطباعة التقارير والشهادات — بالكامل دون إنترنت."
+  />
+  <meta
+    name="keywords"
+    content="معيار المعلم, تطبيق معلم, إدارة الطلاب, تسجيل الحضور, تصحيح OMR, تقارير PDF, Meyar Almoallem, teacher app, offline classroom app"
+  />
+  <meta name="author" content="Meyarm" />
+  <meta name="theme-color" content="#1565d8" />
+  <link rel="canonical" href="https://meyarm.github.io/meyarm/" />
+
+  <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="msapplication-config" content="browserconfig.xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Meyar Almoallem" />
+  <meta property="og:title" content="معيار المعلم — كل ما يحتاجه المعلم لقياس مستوى طلابه" />
+  <meta
+    property="og:description"
+    content="تطبيق مجاني للمعلمين لإدارة الشعب والطلاب والحضور والاختبارات وتصحيح أوراق OMR وطباعة التقارير، بالكامل دون إنترنت."
+  />
+  <meta property="og:image" content="https://meyarm.github.io/meyarm/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://meyarm.github.io/meyarm/" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="معيار المعلم — كل ما يحتاجه المعلم لقياس مستوى طلابه" />
+  <meta
+    name="twitter:description"
+    content="تطبيق مجاني للمعلمين لإدارة الشعب والطلاب والحضور والاختبارات دون إنترنت."
+  />
+  <meta name="twitter:image" content="https://meyarm.github.io/meyarm/images/og-image.png" />
+
+  <!-- Only the Arabic fonts are preloaded: Arabic is the default render
+       path for every visitor, while Inter only loads if/when someone
+       switches to English via the language toggle. -->
+  <link rel="preload" href="fonts/Tajawal-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/Tajawal-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Meyar Almoallem",
+      "alternateName": "معيار المعلم",
+      "applicationCategory": "EducationApplication",
+      "operatingSystem": "Android, iOS",
+      "description": "Offline-first classroom management app for teachers: classes, students, attendance, grades, homework, OMR bubble-sheet grading, PDF reports and certificates. All data stays on-device.",
+      "url": "https://meyarm.github.io/meyarm/",
+      "image": "https://meyarm.github.io/meyarm/images/og-image.png",
+      "author": { "@type": "Organization", "name": "Meyarm" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "14-day free trial"
+      }
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">
+    <span class="i18n-ar">تخطَّ إلى المحتوى</span><span class="i18n-en">Skip to content</span>
+  </a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="images/icons/android-chrome-192x192.png" alt="" width="40" height="40" />
+        <span class="i18n-ar">معيار المعلم</span><span class="i18n-en">Meyar Almoallem</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="التنقل الرئيسي">
+        <a href="index.html" aria-current="page"><span class="i18n-ar">الرئيسية</span><span class="i18n-en">Home</span></a>
+        <a href="index.html#features"><span class="i18n-ar">الميزات</span><span class="i18n-en">Features</span></a>
+        <a href="index.html#screenshots"><span class="i18n-ar">لقطات</span><span class="i18n-en">Screenshots</span></a>
+        <a href="index.html#why"><span class="i18n-ar">لماذا نحن</span><span class="i18n-en">Why Us</span></a>
+        <a href="support.html"><span class="i18n-ar">الدعم</span><span class="i18n-en">Support</span></a>
+        <a href="privacy.html"><span class="i18n-ar">الخصوصية</span><span class="i18n-en">Privacy</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="lang-toggle" data-lang-toggle aria-label="Switch to English">English</button>
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="فتح قائمة التنقل"
+        >
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-blobs" aria-hidden="true">
+        <span class="hero-blob b1"></span>
+        <span class="hero-blob b2"></span>
+        <span class="hero-blob b3"></span>
+      </div>
+
+      <div class="container">
+        <div class="hero-copy">
+          <span class="hero-eyebrow">
+            <span class="i18n-ar">بدون إنترنت · بدون سيرفر · خصوصية كاملة</span>
+            <span class="i18n-en">Offline · No server · Full privacy</span>
+          </span>
+
+          <img class="hero-logo" src="images/icons/android-chrome-192x192.png" alt="" width="64" height="64" />
+
+          <h1>
+            <span class="i18n-ar">معيار المعلم</span>
+            <span class="i18n-en">Meyar Almoallem</span>
+          </h1>
+          <p class="lede">
+            <span class="i18n-ar">كل ما يحتاجه المعلم لقياس مستوى طلابه — في تطبيق واحد يعمل بالكامل دون إنترنت.</span>
+            <span class="i18n-en"
+              >Everything a teacher needs to measure their students' progress — in one app that works completely
+              offline.</span
+            >
+          </p>
+
+          <div class="hero-actions" aria-label="روابط التنزيل والوصول السريع">
+            <span class="btn store-btn" role="button" aria-disabled="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.6.4-1 1-1 .2 0 .4.1.6.2l14.5 8.5c.6.3.6 1.2 0 1.6L4.6 21.3c-.2.1-.4.2-.6.2-.6 0-1-.4-1-1z"/></svg>
+              <span class="store-btn-text">
+                <small class="i18n-ar">قريباً على</small><small class="i18n-en">Coming soon on</small>
+                <strong>Google Play</strong>
+              </span>
+            </span>
+            <a class="btn btn-outline" href="privacy.html">
+              <span class="i18n-ar">سياسة الخصوصية</span><span class="i18n-en">Privacy Policy</span>
+            </a>
+            <a class="btn btn-outline" href="support.html">
+              <span class="i18n-ar">الدعم</span><span class="i18n-en">Support</span>
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <span
+              ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6l8-4z"/></svg>
+              <span class="i18n-ar">لا إعلانات ولا تتبّع</span><span class="i18n-en">No ads, no tracking</span></span
+            >
+            <span
+              ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+              <span class="i18n-ar">تجربة مجانية 14 يوماً</span><span class="i18n-en">14-day free trial</span></span
+            >
+            <span
+              ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12h8M8 16h5"/></svg>
+              <span class="i18n-ar">بياناتك تبقى على جهازك</span><span class="i18n-en">Your data stays on-device</span></span
+            >
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-chip c1" aria-hidden="true">
+            <span class="dot"></span>
+            <span class="i18n-ar">تصحيح OMR فوري</span><span class="i18n-en">Instant OMR grading</span>
+          </div>
+          <div class="hero-chip c2" aria-hidden="true">
+            <span class="dot"></span>
+            <span class="i18n-ar">نسخ احتياطي آمن</span><span class="i18n-en">Secure backups</span>
+          </div>
+          <div class="phone-frame">
+            <picture>
+              <source srcset="images/screenshots/home_screen-sm.webp" type="image/webp" />
+              <img
+                src="images/screenshots/home_screen-sm.png"
+                alt=""
+                loading="eager"
+                fetchpriority="high"
+                width="600"
+                height="1300"
+              />
+            </picture>
+          </div>
+          <div class="phone-frame phone-secondary" aria-hidden="true">
+            <picture>
+              <source srcset="images/screenshots/report_screen-sm.webp" type="image/webp" />
+              <img src="images/screenshots/report_screen-sm.png" alt="" loading="lazy" width="600" height="1300" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow i18n-ar">الميزات</span><span class="eyebrow i18n-en">Features</span>
+          <h2>
+            <span class="i18n-ar">كل ما يحتاجه المعلم في مكان واحد</span>
+            <span class="i18n-en">Everything a teacher needs, in one place</span>
+          </h2>
+          <p>
+            <span class="i18n-ar">من إدارة الشعب إلى تصحيح الاختبارات — بدون تعقيد وبدون اتصال بالإنترنت.</span>
+            <span class="i18n-en">From managing classes to grading exams — no complexity, no internet required.</span>
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon tone-blue">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+            </div>
+            <h3><span class="i18n-ar">إدارة الشعب</span><span class="i18n-en">Class Management</span></h3>
+            <p>
+              <span class="i18n-ar">أنشئ شعبك الدراسية ونظّمها بحرية كاملة خلال ثوانٍ.</span>
+              <span class="i18n-en">Create and organize your classes in seconds, exactly how you like.</span>
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon tone-green">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11a4 4 0 10-4-4 4 4 0 004 4zM8 12a3 3 0 10-3-3 3 3 0 003 3zM17 13c2.5 0 5 1.3 5 3.5V19h-8v-2.5c0-1.1-.5-2.1-1.3-2.9A8 8 0 0117 13zM8 14c-2.8 0-6 1.4-6 4v1h10v-1c0-2.6-3.2-4-4-4z"/></svg>
+            </div>
+            <h3><span class="i18n-ar">إدارة الطلاب</span><span class="i18n-en">Student Management</span></h3>
+            <p>
+              <span class="i18n-ar">أضف طلابك وتابع ملف كل واحد منهم بسهولة تامة.</span>
+              <span class="i18n-en">Add your students and track each one's full profile with ease.</span>
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon tone-orange">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4M22 12v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h11"/></svg>
+            </div>
+            <h3><span class="i18n-ar">الحضور</span><span class="i18n-en">Attendance</span></h3>
+            <p>
+              <span class="i18n-ar">حاضر، غائب، أو متأخر — بضغطة واحدة لكل الصف مع زر "الكل حاضر".</span>
+              <span class="i18n-en">Present, absent, or late — one tap per student, plus a "mark all present" shortcut.</span>
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon tone-purple">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h12l4 4v12a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1zM15 4v5h5M8 13h8M8 17h5"/></svg>
+            </div>
+            <h3><span class="i18n-ar">الواجبات</span><span class="i18n-en">Homework</span></h3>
+            <p>
+              <span class="i18n-ar">تتبّع تسليم الواجبات لكل طالب، مع سجل كامل للحالة.</span>
+              <span class="i18n-en">Track homework submission per student with a full status history.</span>
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon tone-blue">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.3l-6.2 3.3 1.2-6.9L2 8.9l7-1L12 1.5l3 6.4 7 1-5 4.8 1.2 6.9z"/></svg>
+            </div>
+            <h3><span class="i18n-ar">الاختبارات</span><span class="i18n-en">Exams</span></h3>
+            <p>
+              <span class="i18n-ar">سجّل درجات الاختبارات بألوان تلقائية حسب مستوى كل درجة.</span>
+              <span class="i18n-en">Log exam grades with automatic color-coding by score level.</span>
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon tone-green">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/><circle cx="12" cy="14" r="3.5"/></svg>
+            </div>
+            <h3><span class="i18n-ar">تصحيح OMR</span><span class="i18n-en">OMR Grading</span></h3>
+            <p>
+              <span class="i18n-ar">صوّر ورقة الإجابة وصحّحها تلقائياً على الجهاز، دون رفع أي صورة لأي خادم.</span>
+              <span class="i18n-en">Photograph an answer sheet and grade it automatically on-device — no uploads.</span>
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon tone-orange">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5a2 2 0 012-2h8l6 6v10a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+            </div>
+            <h3><span class="i18n-ar">التقارير</span><span class="i18n-en">Reports</span></h3>
+            <p>
+              <span class="i18n-ar">تقرير شامل لكل طالب بإحصائيات وأشرطة تقدّم واضحة.</span>
+              <span class="i18n-en">A complete per-student report with clear statistics and progress bars.</span>
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon tone-purple">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/><path d="M14 2v6h6"/><path d="M9 15l1.5 1.5L14 13"/></svg>
+            </div>
+            <h3>PDF</h3>
+            <p>
+              <span class="i18n-ar">صدّر أي تقرير كملف PDF أنيق بتصميم عربي، جاهز للطباعة والمشاركة.</span>
+              <span class="i18n-en">Export any report as an elegant PDF with Arabic typography, ready to print and share.</span>
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon tone-blue">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 16.9l-5.9 2.9 1.3-6.5-4.9-4.5 6.6-.8z"/></svg>
+            </div>
+            <h3><span class="i18n-ar">الشهادات</span><span class="i18n-en">Certificates</span></h3>
+            <p>
+              <span class="i18n-ar">أنشئ شهادات تقدير احترافية للطلاب المتميزين بضغطة واحدة.</span>
+              <span class="i18n-en">Generate professional certificates of achievement in one tap.</span>
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon tone-green">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 3v6h-6"/></svg>
+            </div>
+            <h3><span class="i18n-ar">النسخ الاحتياطي</span><span class="i18n-en">Backup &amp; Restore</span></h3>
+            <p>
+              <span class="i18n-ar">شارك ملف النسخة الاحتياطية لنفسك واستعدها لاحقاً، مع تحقق تلقائي من سلامتها.</span>
+              <span class="i18n-en">Share a backup file to yourself and restore it later, with automatic integrity checks.</span>
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon tone-orange">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><circle cx="8" cy="15" r="1.4"/></svg>
+            </div>
+            <h3><span class="i18n-ar">الاشتراكات</span><span class="i18n-en">Subscriptions</span></h3>
+            <p>
+              <span class="i18n-ar">تجربة مجانية 14 يوماً ثم اشتراك بسيط تُديره من متجر التطبيقات مباشرة.</span>
+              <span class="i18n-en">14-day free trial, then a simple subscription managed directly through your app store.</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="screenshots">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow i18n-ar">لقطات من التطبيق</span><span class="eyebrow i18n-en">Screenshots</span>
+          <h2>
+            <span class="i18n-ar">واجهة عربية واضحة، مصمّمة للمعلم</span>
+            <span class="i18n-en">A clear Arabic interface, built for teachers</span>
+          </h2>
+          <p class="i18n-ar">اضغط على أي لقطة لتكبيرها.</p>
+          <p class="i18n-en">Click any screenshot to zoom in.</p>
+        </div>
+
+        <div class="gallery">
+          <button
+            type="button"
+            class="gallery-item reveal"
+            data-lightbox-trigger
+            data-full="images/screenshots/home_screen.webp"
+            data-caption-ar="الشاشة الرئيسية"
+            data-caption-en="Home screen"
+          >
+            <picture>
+              <source srcset="images/screenshots/home_screen-sm.webp" type="image/webp" />
+              <img
+                src="images/screenshots/home_screen-sm.png"
+                alt="لقطة من الشاشة الرئيسية لتطبيق معيار المعلم"
+                loading="lazy"
+                width="600"
+                height="1300"
+              />
+            </picture>
+            <span class="gallery-caption"><span class="i18n-ar">الشاشة الرئيسية</span><span class="i18n-en">Home screen</span></span>
+          </button>
+
+          <button
+            type="button"
+            class="gallery-item reveal"
+            data-lightbox-trigger
+            data-full="images/screenshots/report_screen.webp"
+            data-caption-ar="تقرير الطالب"
+            data-caption-en="Student report"
+          >
+            <picture>
+              <source srcset="images/screenshots/report_screen-sm.webp" type="image/webp" />
+              <img
+                src="images/screenshots/report_screen-sm.png"
+                alt="لقطة من شاشة تقرير الطالب في تطبيق معيار المعلم"
+                loading="lazy"
+                width="600"
+                height="1300"
+              />
+            </picture>
+            <span class="gallery-caption"><span class="i18n-ar">تقرير الطالب</span><span class="i18n-en">Student report</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="why">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow i18n-ar">لماذا معيار المعلم؟</span><span class="eyebrow i18n-en">Why Meyar Almoallem?</span>
+          <h2>
+            <span class="i18n-ar">مصمَّم ليعمل كما يعمل المعلم فعلاً</span>
+            <span class="i18n-en">Built the way teachers actually work</span>
+          </h2>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card reveal">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19l-7-7 7-7M5 12h14"/></svg>
+            </div>
+            <h3><span class="i18n-ar">أولوية للعمل دون إنترنت</span><span class="i18n-en">Offline First</span></h3>
+            <p>
+              <span class="i18n-ar">لا حاجة لشبكة أو واي فاي في الصف. كل شيء يعمل فوراً من جهازك.</span>
+              <span class="i18n-en">No network or Wi-Fi needed in the classroom. Everything runs instantly from your device.</span>
+            </p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            </div>
+            <h3><span class="i18n-ar">عربي أولاً</span><span class="i18n-en">Arabic-first</span></h3>
+            <p>
+              <span class="i18n-ar">واجهة عربية RTL كاملة، مع تكيّف تلقائي حسب جنس المعلم والطالب.</span>
+              <span class="i18n-en">A complete Arabic RTL interface that adapts automatically to teacher and student gender.</span>
+            </p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            </div>
+            <h3><span class="i18n-ar">سريع</span><span class="i18n-en">Fast</span></h3>
+            <p>
+              <span class="i18n-ar">بدون تحميل أو انتظار خادم — كل عملية تحدث فوراً على جهازك.</span>
+              <span class="i18n-en">No loading spinners or server round-trips — every action happens instantly on your device.</span>
+            </p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6l8-4z"/></svg>
+            </div>
+            <h3><span class="i18n-ar">آمن</span><span class="i18n-en">Secure</span></h3>
+            <p>
+              <span class="i18n-ar">بياناتك لا تغادر جهازك، ونسخك الاحتياطية محمية ببصمة SHA-256.</span>
+              <span class="i18n-en">Your data never leaves your device, and backups are protected with a SHA-256 checksum.</span>
+            </p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5a2 2 0 012-2h8l6 6v10a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+            </div>
+            <h3><span class="i18n-ar">تقارير احترافية</span><span class="i18n-en">Professional Reports</span></h3>
+            <p>
+              <span class="i18n-ar">تقارير وشهادات PDF بتصميم أنيق، جاهزة للطباعة والمشاركة فوراً.</span>
+              <span class="i18n-en">Elegant PDF reports and certificates, ready to print and share instantly.</span>
+            </p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/><circle cx="12" cy="14" r="3.5"/></svg>
+            </div>
+            <h3>OMR</h3>
+            <p>
+              <span class="i18n-ar">تصحيح أوراق الإجابة بالكاميرا محلياً — بلا سكانر خارجي وبلا رفع أي صورة.</span>
+              <span class="i18n-en">Camera-based answer sheet grading, fully local — no external scanner, no image uploads.</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="privacy-banner reveal">
+          <div>
+            <h2><span class="i18n-ar">الخصوصية ليست شعاراً، بل تصميم</span><span class="i18n-en">Privacy by design, not a slogan</span></h2>
+            <p>
+              <span class="i18n-ar"
+                >لا يوجد خادم يخزّن بيانات طلابك. كل شيء — الأسماء، الدرجات، الحضور، التقارير — يبقى على جهازك
+                فقط.</span
+              >
+              <span class="i18n-en"
+                >There is no server storing your students' data. Everything — names, grades, attendance, reports —
+                stays on your device only.</span
+              >
+            </p>
+            <ul class="privacy-list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                <span class="i18n-ar">بدون Firebase أو Google Analytics أو إعلانات</span
+                ><span class="i18n-en">No Firebase, no Google Analytics, no ads</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                <span class="i18n-ar">الإنترنت يُستخدم فقط للتحقق من الاشتراك</span
+                ><span class="i18n-en">Internet is used only to verify your subscription</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                <span class="i18n-ar">النسخ الاحتياطية تُحفظ وتُشارك من قِبلك أنت فقط</span
+                ><span class="i18n-en">Backups are saved and shared only by you</span>
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost" href="privacy.html">
+            <span class="i18n-ar">اقرأ سياسة الخصوصية</span><span class="i18n-en">Read the privacy policy</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container reveal">
+        <h2><span class="i18n-ar">جاهز لتنظيم صفّك؟</span><span class="i18n-en">Ready to organize your classroom?</span></h2>
+        <p>
+          <span class="i18n-ar">ابدأ بتجربة مجانية لمدة 14 يوماً — بدون بطاقة ائتمان، وبدون إنترنت.</span>
+          <span class="i18n-en">Start a 14-day free trial — no credit card, no internet required.</span>
+        </p>
+        <div class="hero-actions">
+          <span class="btn store-btn" role="button" aria-disabled="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.6.4-1 1-1 .2 0 .4.1.6.2l14.5 8.5c.6.3.6 1.2 0 1.6L4.6 21.3c-.2.1-.4.2-.6.2-.6 0-1-.4-1-1z"/></svg>
+            <span class="store-btn-text">
+              <small class="i18n-ar">قريباً على</small><small class="i18n-en">Coming soon on</small>
+              <strong>Google Play</strong>
+            </span>
+          </span>
+          <a class="btn btn-primary" href="support.html">
+            <span class="i18n-ar">تواصل معنا</span><span class="i18n-en">Contact us</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="معاينة لقطة الشاشة">
+    <div class="lightbox-inner">
+      <button type="button" class="lightbox-close" aria-label="إغلاق">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <button type="button" class="lightbox-nav prev" aria-label="اللقطة السابقة">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <img alt="" />
+      <button type="button" class="lightbox-nav next" aria-label="اللقطة التالية">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="images/icons/android-chrome-192x192.png" alt="" width="36" height="36" loading="lazy" />
+            <span class="i18n-ar">معيار المعلم</span><span class="i18n-en">Meyar Almoallem</span>
+          </div>
+          <p>
+            <span class="i18n-ar">تطبيق دون إنترنت لإدارة الصف الدراسي، مصمّم خصيصاً للمعلمين والمعلمات.</span>
+            <span class="i18n-en">An offline classroom management app, built for teachers.</span>
+          </p>
+          <p class="footer-dev">
+            <span class="i18n-ar">المطوّر: <strong>Meyarm</strong></span>
+            <span class="i18n-en">Developer: <strong>Meyarm</strong></span>
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3><span class="i18n-ar">الموقع</span><span class="i18n-en">Site</span></h3>
+          <ul>
+            <li><a href="index.html"><span class="i18n-ar">الرئيسية</span><span class="i18n-en">Home</span></a></li>
+            <li><a href="index.html#features"><span class="i18n-ar">الميزات</span><span class="i18n-en">Features</span></a></li>
+            <li><a href="index.html#screenshots"><span class="i18n-ar">لقطات</span><span class="i18n-en">Screenshots</span></a></li>
+            <li><a href="support.html"><span class="i18n-ar">الدعم</span><span class="i18n-en">Support</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3><span class="i18n-ar">قانوني</span><span class="i18n-en">Legal</span></h3>
+          <ul>
+            <li><a href="privacy.html"><span class="i18n-ar">سياسة الخصوصية</span><span class="i18n-en">Privacy Policy</span></a></li>
+            <li><a href="terms.html"><span class="i18n-ar">شروط الاستخدام</span><span class="i18n-en">Terms of Service</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3><span class="i18n-ar">تواصل معنا</span><span class="i18n-en">Contact</span></h3>
+          <ul>
+            <li><a href="mailto:meyarm.app@gmail.com">meyarm.app@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-current-year>2026</span> Meyarm — <span class="i18n-ar">جميع الحقوق محفوظة</span><span class="i18n-en">All rights reserved</span></span>
+        <span class="i18n-ar">صُنع بعناية للمعلمين والمعلمات</span><span class="i18n-en">Made with care for teachers</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

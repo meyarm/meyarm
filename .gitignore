@@ -1,0 +1,11 @@
+# Local Claude Code tooling config — not site content
+.claude/
+
+# Raw/unprocessed source uploads — the deployed site uses the optimized
+# copies under images/icons/ and images/screenshots/ instead
+/icon/
+/screenshots/
+
+# OS cruft
+.DS_Store
+Thumbs.db
