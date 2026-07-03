@@ -735,40 +735,13 @@ html[data-lang="en"] .i18n-ar {
   justify-content: center;
 }
 
-.phone-frame {
-  width: min(300px, 72vw);
-  border-radius: 36px;
-  padding: 12px;
-  background: linear-gradient(160deg, var(--ink), #0c1424);
-  box-shadow: var(--shadow-lg);
-  position: relative;
-}
-
-.phone-frame::before {
-  content: "";
-  position: absolute;
-  top: 22px;
-  inset-inline-start: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 6px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.18);
-}
-
-.phone-frame img {
-  border-radius: 24px;
+.hero-banner {
   width: 100%;
 }
 
-.phone-frame.phone-secondary {
-  position: absolute;
-  bottom: -36px;
-  inset-inline-start: -70px;
-  width: min(200px, 50vw);
-  transform: rotate(-7deg);
-  z-index: -1;
-  opacity: 0.97;
+.hero-banner img {
+  width: 100%;
+  display: block;
 }
 
 .hero-chip {
@@ -941,8 +914,8 @@ html[data-lang="en"] .i18n-ar {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+  gap: 32px;
   justify-content: center;
 }
 
@@ -969,7 +942,6 @@ html[data-lang="en"] .i18n-ar {
 
 .gallery-item picture,
 .gallery-item img {
-  border-radius: var(--radius-sm);
   width: 100%;
 }
 
@@ -1854,10 +1826,6 @@ html[dir="rtl"] .why-card::before {
 
   .hero-media {
     margin-top: 36px;
-  }
-
-  .phone-frame.phone-secondary {
-    display: none;
   }
 
   .hero-chip {
