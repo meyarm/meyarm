@@ -115,11 +115,11 @@
 
 ## 8. المدفوعات والاشتراكات
 
-تُدار الاشتراكات داخل التطبيق عبر **Google Play Billing**.
+تُدار الاشتراكات داخل التطبيق عبر **Google Play Billing** على أندرويد، أو عبر **App Store (Apple)** على iOS، حسب المنصّة التي تستخدمها.
 
-- تتم جميع عمليات الدفع بواسطة Google Play.
+- تتم جميع عمليات الدفع بواسطة Google Play أو Apple، حسب المنصّة.
 - **لا نقوم بجمع أو تخزين معلومات بطاقات الدفع.**
-- تخضع معالجة الدفع لسياسة خصوصية Google Play وشروطها.
+- تخضع معالجة الدفع لسياسة خصوصية وشروط Google Play أو Apple، حسب الحال.
 
 ---
 
@@ -130,7 +130,8 @@
 | الخدمة | الغرض | البيانات المُرسَلة |
 | ------ | ----- | ------------------ |
 | Supabase | التحقق من أهلية الفترة التجريبية (تجربة واحدة لكل جهاز)، وتفعيل أكواد الاشتراك والتحقق من صلاحيتها | مُعرّف الجهاز فقط (وكود التفعيل عند إدخاله) |
-| Google Play Billing | إدارة الاشتراكات وعمليات الدفع داخل التطبيق | تُدار بواسطة Google |
+| Google Play Billing | إدارة الاشتراكات وعمليات الدفع داخل التطبيق (أندرويد) | تُدار بواسطة Google |
+| App Store (Apple) | إدارة الاشتراكات وعمليات الدفع داخل التطبيق (iOS) | تُدار بواسطة Apple |
 
 **لا يستخدم التطبيق أي خدمات تتبّع أو تحليلات أو إعلانات.** (لا Firebase، ولا Google Analytics، ولا Crashlytics، ولا خدمات إعلانات، ولا ملفات تعريف ارتباط Cookies.)
 
@@ -171,7 +172,7 @@
 - **حذف البيانات:** يمكنك حذف الطلاب أو الشعب أو أي سجلات من داخل التطبيق في أي وقت.
 - **حذف النسخ الاحتياطية:** يمكنك حذف ملفات النسخ الاحتياطية التي أنشأتها من جهازك أو من أي مكان شاركتها فيه.
 - **إزالة التطبيق:** عند إلغاء تثبيت التطبيق، تُحذف قاعدة البيانات المحلية وبياناتها من الجهاز.
-- **إلغاء الاشتراك:** يمكنك إدارة أو إلغاء اشتراكك في أي وقت من خلال إعدادات الاشتراكات في **Google Play**.
+- **إلغاء الاشتراك:** يمكنك إدارة أو إلغاء اشتراكك في أي وقت من خلال إعدادات الاشتراكات في **Google Play** أو **App Store**، حسب المنصّة التي تستخدمها.
 
 ---
 
@@ -317,11 +318,11 @@ All of these files remain **on your device** and are never transferred to our se
 
 ## 8. Payments and Subscriptions
 
-In-app subscriptions are managed through **Google Play Billing**.
+In-app subscriptions are managed through **Google Play Billing** on Android, or through the **App Store (Apple)** on iOS, depending on your platform.
 
-- All payments are processed by Google Play.
+- All payments are processed by Google Play or Apple, depending on the platform.
 - **We do not collect or store any payment card information.**
-- Payment processing is subject to Google Play's own privacy policy and terms.
+- Payment processing is subject to Google Play's or Apple's own privacy policy and terms, as applicable.
 
 ---
 
@@ -332,7 +333,8 @@ The app relies on the following external services **only**:
 | Service | Purpose | Data Sent |
 | ------- | ------- | --------- |
 | Supabase | Verifying free-trial eligibility (one trial per device), and activating subscription codes and verifying their validity | Device identifier only (plus the activation code when entered) |
-| Google Play Billing | Managing in-app subscriptions and payments | Handled by Google |
+| Google Play Billing | Managing in-app subscriptions and payments (Android) | Handled by Google |
+| App Store (Apple) | Managing in-app subscriptions and payments (iOS) | Handled by Apple |
 
 **The app does not use any tracking, analytics, or advertising services.** (No Firebase, no Google Analytics, no Crashlytics, no advertising services, and no cookies.)
 
@@ -373,7 +375,7 @@ Since your data is stored locally, you have full control over it:
 - **Delete data:** You can delete students, classes, or any records from within the app at any time.
 - **Delete backups:** You can delete backup files you created from your device or from anywhere you shared them.
 - **Uninstall the app:** When you uninstall the app, the local database and its data are removed from the device.
-- **Cancel subscription:** You can manage or cancel your subscription at any time through the subscription settings in **Google Play**.
+- **Cancel subscription:** You can manage or cancel your subscription at any time through the subscription settings in **Google Play** or the **App Store**, depending on your platform.
 
 ---
 
