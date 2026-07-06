@@ -1668,10 +1668,18 @@ html[dir="rtl"] .why-card::before {
   margin-top: auto;
 }
 
-/* Google Play "coming soon" card gets the same dark store-pill used in the hero */
+/* Google Play / App Store "coming soon" card gets the same dark store-pill used in the hero */
 .support-card .store-btn {
   width: 100%;
   justify-content: center;
+}
+
+.store-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
 }
 
 .support-contact {
