@@ -62,21 +62,43 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "Meyar Almoallem",
-      "alternateName": "معيار المعلم",
-      "applicationCategory": "EducationApplication",
-      "operatingSystem": "Android, iOS",
-      "description": "Offline-first classroom management app for teachers: classes, students, attendance, grades, homework, OMR bubble-sheet grading, PDF reports and certificates. All data stays on-device.",
-      "url": "https://meyarm.github.io/meyarm/",
-      "image": "https://meyarm.github.io/meyarm/images/og-image.png",
-      "author": { "@type": "Organization", "name": "Meyarm" },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "description": "7-day free trial"
-      }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://meyarm.github.io/meyarm/#organization",
+          "name": "Meyarm",
+          "url": "https://meyarm.github.io/meyarm/",
+          "logo": "https://meyarm.github.io/meyarm/images/icons/android-chrome-512x512.png",
+          "email": "meyarm.app@gmail.com",
+          "sameAs": ["https://x.com/meyarm_app", "https://www.tiktok.com/@meyarm.app"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://meyarm.github.io/meyarm/#website",
+          "name": "Meyar Almoallem",
+          "alternateName": "معيار المعلم",
+          "url": "https://meyarm.github.io/meyarm/",
+          "inLanguage": "ar",
+          "publisher": { "@id": "https://meyarm.github.io/meyarm/#organization" }
+        },
+        {
+          "@type": "MobileApplication",
+          "name": "Meyar Almoallem",
+          "alternateName": "معيار المعلم",
+          "applicationCategory": "EducationApplication",
+          "operatingSystem": "Android, iOS",
+          "description": "Offline-first classroom management app for teachers: classes, students, attendance, grades, homework, OMR bubble-sheet grading, PDF reports and certificates. All data stays on-device.",
+          "url": "https://meyarm.github.io/meyarm/",
+          "image": "https://meyarm.github.io/meyarm/images/og-image.png",
+          "author": { "@id": "https://meyarm.github.io/meyarm/#organization" },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "7-day free trial"
+          }
+        }
+      ]
     }
   </script>
 </head>
@@ -208,7 +230,7 @@
               <source srcset="images/screenshots/home_screen_hero.webp" type="image/webp" />
               <img
                 src="images/screenshots/home_screen_hero.png"
-                alt=""
+                alt="الشاشة الرئيسية لتطبيق معيار المعلم لإدارة الشعب والطلاب"
                 loading="eager"
                 fetchpriority="high"
                 width="565"
