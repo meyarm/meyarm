@@ -9,6 +9,38 @@
 /* ------------------------------------------------------------------ */
 
 @font-face {
+  font-family: "Readex Pro";
+  src: url("../fonts/ReadexPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Readex Pro";
+  src: url("../fonts/ReadexPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Readex Pro";
+  src: url("../fonts/ReadexPro-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Readex Pro";
+  src: url("../fonts/ReadexPro-Bold.woff2") format("woff2");
+  font-weight: 700 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Tajawal";
   src: url("../fonts/Tajawal-Regular.woff2") format("woff2");
   font-weight: 400;
@@ -45,25 +77,27 @@
 /* ------------------------------------------------------------------ */
 
 :root {
-  --primary: #1565d8;
-  --primary-600: #1155ba;
-  --primary-700: #0d3e8f;
-  --primary-50: #eaf1fd;
+  --primary: #1f4d43;
+  --primary-600: #173b33;
+  --primary-700: #12302a;
+  --primary-50: #e4ece8;
+  --gold: #e3a836;
+  --gold-600: #d29a28;
 
-  --green: #43a047;
-  --green-50: #e7f6e8;
-  --orange: #fb8c00;
-  --orange-50: #fff2e1;
-  --purple: #8e24aa;
+  --green: #2e7d4f;
+  --green-50: #e6f2ea;
+  --orange: #c98a12;
+  --orange-50: #f6e7c4;
+  --purple: #b4532a;
 
-  --ink: #1a2233;
-  --ink-soft: #48566b;
-  --muted: #5b6b82;
-  --line: rgba(26, 34, 51, 0.1);
-  --surface: #ffffff;
-  --bg: #f6f8fc;
+  --ink: #1d2b27;
+  --ink-soft: #3f4d48;
+  --muted: #5e6b66;
+  --line: rgba(29, 43, 39, 0.1);
+  --surface: #fffdf8;
+  --bg: #f5f1e8;
 
-  --font-ar: "Tajawal", "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-ar: "Readex Pro", "Tajawal", "Segoe UI", Tahoma, Arial, sans-serif;
   --font-en: "Inter", "Segoe UI", Tahoma, Arial, sans-serif;
 
   --radius-sm: 10px;
@@ -71,9 +105,9 @@
   --radius-lg: 26px;
   --radius-pill: 999px;
 
-  --shadow-xs: 0 1px 3px rgba(26, 34, 51, 0.07);
-  --shadow-sm: 0 6px 18px rgba(26, 34, 51, 0.08);
-  --shadow-md: 0 14px 36px rgba(26, 34, 51, 0.12);
+  --shadow-xs: 0 1px 3px rgba(29, 43, 39, 0.07);
+  --shadow-sm: 0 6px 18px rgba(29, 43, 39, 0.08);
+  --shadow-md: 0 14px 36px rgba(29, 43, 39, 0.12);
 
   --header-h: 68px;
   --toolbar-h: 52px;
@@ -84,8 +118,8 @@
 
 @media (prefers-contrast: more) {
   :root {
-    --muted: #3d4a5c;
-    --line: rgba(26, 34, 51, 0.24);
+    --muted: #5e6b66;
+    --line: rgba(29, 43, 39, 0.24);
   }
 }
 
@@ -207,7 +241,7 @@ button {
 .progress-bar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--primary), var(--purple));
+  background: linear-gradient(90deg, var(--primary), var(--gold));
   transition: width 0.1s linear;
 }
 
@@ -483,7 +517,7 @@ button {
 }
 
 mark[data-search-mark] {
-  background: #ffe699;
+  background: #f6e7c4;
   color: inherit;
   border-radius: 3px;
   padding: 0 2px;
@@ -888,7 +922,7 @@ mark[data-search-mark].is-current {
 /* ------------------------------------------------------------------ */
 
 .site-footer {
-  background: linear-gradient(180deg, var(--ink), #0b1730);
+  background: linear-gradient(180deg, var(--ink), #0f2924);
   color: rgba(255, 255, 255, 0.75);
   padding: 48px 0 26px;
   font-size: 14px;
