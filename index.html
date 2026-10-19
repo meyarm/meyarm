@@ -59,6 +59,13 @@
   <link rel="preload" href="fonts/Tajawal-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/Tajawal-Bold.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="styles/style.css" />
+  <script>
+    // Opt into the Motion-driven animations (scripts/motion-fx.js) before
+    // first paint, so animated elements start hidden instead of flashing.
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("motion-ready");
+    }
+  </script>
 
   <script type="application/ld+json">
     {
@@ -125,6 +132,9 @@
       </nav>
 
       <div class="header-actions">
+        <a class="btn btn-primary btn-sm header-cta" href="#download">
+          <span class="i18n-ar">حمّل التطبيق</span><span class="i18n-en">Get the app</span>
+        </a>
         <button type="button" class="lang-toggle" data-lang-toggle aria-label="Switch to English">English</button>
         <button
           type="button"
@@ -141,20 +151,15 @@
 
   <main id="main">
     <section class="hero">
-      <div class="hero-blobs" aria-hidden="true">
-        <span class="hero-blob b1"></span>
-        <span class="hero-blob b2"></span>
-        <span class="hero-blob b3"></span>
-      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
 
       <div class="container">
         <div class="hero-copy">
           <span class="hero-eyebrow">
+            <span class="hero-eyebrow-dot" aria-hidden="true"></span>
             <span class="i18n-ar">بدون إنترنت · بدون سيرفر · خصوصية كاملة</span>
             <span class="i18n-en">Offline · No server · Full privacy</span>
           </span>
-
-          <img class="hero-logo" src="images/icons/android-chrome-192x192.png" alt="" width="64" height="64" />
 
           <h1>
             <span class="i18n-ar">تطبيق معيار المعلم</span>
@@ -193,12 +198,6 @@
                 <strong>App Store</strong>
               </span>
             </a>
-            <a class="btn btn-outline" href="privacy.html">
-              <span class="i18n-ar">سياسة الخصوصية</span><span class="i18n-en">Privacy Policy</span>
-            </a>
-            <a class="btn btn-outline" href="support.html">
-              <span class="i18n-ar">الدعم</span><span class="i18n-en">Support</span>
-            </a>
           </div>
 
           <div class="hero-trust">
@@ -218,6 +217,7 @@
         </div>
 
         <div class="hero-media">
+          <div class="hero-glow" aria-hidden="true"></div>
           <div class="hero-chip c1" aria-hidden="true">
             <span class="dot"></span>
             <span class="i18n-ar">تصحيح OMR فوري</span><span class="i18n-en">Instant OMR grading</span>
@@ -240,6 +240,29 @@
             </picture>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="أبرز الأرقام">
+      <div class="container">
+        <dl class="stats-grid">
+          <div class="stat">
+            <dt><span class="i18n-ar">أداة للمعلم في تطبيق واحد</span><span class="i18n-en">teacher tools in one app</span></dt>
+            <dd>11</dd>
+          </div>
+          <div class="stat">
+            <dt><span class="i18n-ar">يعمل دون إنترنت</span><span class="i18n-en">works offline</span></dt>
+            <dd>100%</dd>
+          </div>
+          <div class="stat">
+            <dt><span class="i18n-ar">إعلانات أو أدوات تتبّع</span><span class="i18n-en">ads or trackers</span></dt>
+            <dd>0</dd>
+          </div>
+          <div class="stat">
+            <dt><span class="i18n-ar">أيام تجربة مجانية</span><span class="i18n-en">day free trial</span></dt>
+            <dd>7</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -482,7 +505,46 @@
       </div>
     </section>
 
-    <section class="section section-alt" id="why">
+    <section class="section section-alt" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow i18n-ar">كيف يعمل</span><span class="eyebrow i18n-en">How it works</span>
+          <h2>
+            <span class="i18n-ar">ابدأ في ثلاث خطوات بسيطة</span>
+            <span class="i18n-en">Get started in three simple steps</span>
+          </h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3><span class="i18n-ar">حمّل التطبيق</span><span class="i18n-en">Download the app</span></h3>
+            <p>
+              <span class="i18n-ar">من Google Play أو App Store، وتبدأ تجربتك المجانية تلقائياً.</span>
+              <span class="i18n-en">From Google Play or the App Store — your free trial starts automatically.</span>
+            </p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3><span class="i18n-ar">أضف شعبك وطلابك</span><span class="i18n-en">Add classes &amp; students</span></h3>
+            <p>
+              <span class="i18n-ar">أنشئ الشعب وأدخل أسماء الطلاب وجدول حصصك خلال دقائق.</span>
+              <span class="i18n-en">Create your classes, add students and set your timetable in minutes.</span>
+            </p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3><span class="i18n-ar">تابع واصدر التقارير</span><span class="i18n-en">Track &amp; report</span></h3>
+            <p>
+              <span class="i18n-ar">سجّل الحضور والدرجات، وصحّح بـ OMR، وصدّر تقارير PDF جاهزة.</span>
+              <span class="i18n-en">Log attendance and grades, grade with OMR, and export ready-made PDF reports.</span>
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="why">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow i18n-ar">لماذا معيار المعلم؟</span><span class="eyebrow i18n-en">Why Meyar Almoallem?</span>
@@ -562,7 +624,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-tight">
       <div class="container">
         <div class="privacy-banner reveal">
           <div>
@@ -602,8 +664,10 @@
       </div>
     </section>
 
-    <section class="section cta-section">
-      <div class="container reveal">
+    <section class="section cta-section" id="download">
+      <div class="container">
+        <div class="cta-band reveal">
+        <img class="cta-logo" src="images/icons/android-chrome-192x192.png" alt="" width="64" height="64" loading="lazy" />
         <h2><span class="i18n-ar">جاهز لتنظيم صفّك؟</span><span class="i18n-en">Ready to organize your classroom?</span></h2>
         <p>
           <span class="i18n-ar">ابدأ بتجربة مجانية لمدة 7 أيام — بدون بطاقة ائتمان، وبدون إنترنت.</span>
@@ -634,9 +698,10 @@
               <strong>App Store</strong>
             </span>
           </a>
-          <a class="btn btn-primary" href="support.html">
+          <a class="btn btn-ghost" href="support.html">
             <span class="i18n-ar">تواصل معنا</span><span class="i18n-en">Contact us</span>
           </a>
+        </div>
         </div>
       </div>
     </section>
@@ -708,5 +773,7 @@
   </footer>
 
   <script src="scripts/main.js"></script>
+  <script defer src="scripts/vendor/motion.min.js"></script>
+  <script defer src="scripts/motion-fx.js"></script>
 </body>
 </html>

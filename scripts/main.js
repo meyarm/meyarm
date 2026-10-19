@@ -132,6 +132,14 @@
     if (!items.length) {
       return;
     }
+    // motion-fx.js owns reveals when it loaded; otherwise drop the flag so
+    // the CSS fallback below (and the hero keyframes) take over.
+    if (html.classList.contains("motion-ready")) {
+      if (window.Motion) {
+        return;
+      }
+      html.classList.remove("motion-ready");
+    }
     if (!("IntersectionObserver" in window)) {
       items.forEach(function (el) {
         el.classList.add("is-visible");
